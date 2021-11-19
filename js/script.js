@@ -18,17 +18,17 @@ console.log( `${age}`);
 const rate = 0.21;
 
 // 3.Stampa il prezzo del biglietto
-let price = parseInt(distance * rate);
+let price = parseFloat(distance * rate);
 
 if (age < 18){
     let underPrice = price - (price / 100 * 20);
-    document.getElementById('underPrice').innerHTML = underPrice;
+    document.getElementById('underPrice').innerHTML = underPrice.toFixed( 2 );
     console.log (underPrice.toFixed( 2 ));
 } else if (age > 65){
     let overPrice = price - (price / 100 * 40);
-    document.getElementById('overPrice').innerHTML = overPrice;
+    document.getElementById('overPrice').innerHTML = overPrice.toFixed( 2 );
     console.log( overPrice.toFixed( 2 ));
 } else {
     console.log (price.toFixed( 2 ));
-    document.getElementById('price').innerHTML = price;
+    document.getElementById('price').innerHTML = price.toFixed( 2 );
 }
